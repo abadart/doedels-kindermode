@@ -1,0 +1,19 @@
+@import url('./base/reset.css');
+@import url('./base/variables.css');
+@import url('./base/typografy.css');
+@import url('./base/layout.css');
+
+@import url('./components/header.css');
+@import url('./components/footer.css');
+
+.block {
+    margin-top: 2rem;
+    min-width: 100px;
+    min-height: 100px;
+
+    grid-column: content;
+}
+
+.bg-green {
+    background-color: var(--clr-bg-blue);
+}

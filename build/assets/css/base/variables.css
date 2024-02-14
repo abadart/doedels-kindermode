@@ -1,0 +1,54 @@
+:root {
+    --clr-green: #8ad300;
+    --clr-green-medium: #b8df79;
+    --clr-green-light: #e0f1c5;
+    --clr-blue: #00aadb;
+    --clr-blue-medium: #5ec4e8;
+    --clr-blue-light: #b1dff3;
+    --clr-pink: #e6007e;
+    --clr-pink-medium: #f088b6; 
+    --clr-pink-light: #f1c0d7;
+
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+
+    --clr-bg-green: rgba(141,164,140,0.2);
+    --clr-bg-blue: rgba(171, 211, 222, 0.2);
+    --clr-bg-pink: rgba(196, 99, 142, 0.2);
+
+    --gutter: 1rem;
+    --gutter-s: calc(var(--gutter) / 2);
+    --gutter-m: calc(var(--gutter) * 1.5);
+    --gutter-l: calc(var(--gutter) * 2);
+    --gutter-xl: calc(var(--gutter) * 2.5);
+
+    --max-content-width: 1320px;
+
+    --header-color: var(--bs-gray-800);
+    --txt-color: var(--bs-gray-800);
+
+    --fs0: 1rem;
+    --fs1: 1.25rem;
+    --fs2: 1.563rem;
+    --fs3: 1.953rem;
+
+    /* --bp-s: 575px;
+    --bp-m: 768px;
+    --bp-l: 992px;
+    --bp-xl: 1200px;
+    --bp-xxl: 1400px; */
+
+
+    /* @media (min-width: 992px) { }
+    
+    @media (min-width: 1200px) {  }
+    
+    @media (min-width: 1400px) {  } */
+}

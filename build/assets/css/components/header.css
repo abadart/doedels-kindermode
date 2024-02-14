@@ -1,0 +1,30 @@
+header {
+    background-color: var(--clr-bg-green);
+    min-height: 100px;
+}
+
+header{
+    nav {
+
+        /* grid-column: 2/3; */
+
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .logo {
+
+    }
+}
