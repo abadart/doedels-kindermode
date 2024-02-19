@@ -1,5 +1,4 @@
 node_modules/
 
-source/_html/.jekyll-cache
-source/_html/.jekyll-metadata
+docs/
 *.lock

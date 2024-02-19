@@ -16,4 +16,9 @@
 
 .bg-green {
     background-color: var(--clr-bg-blue);
+    color: orange;
+}
+
+h1 {
+    color: green;
 }

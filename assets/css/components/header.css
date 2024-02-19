@@ -6,8 +6,6 @@ header {
 header{
     nav {
 
-        /* grid-column: 2/3; */
-
         ul {
             margin: 0;
             padding: 0;
@@ -24,7 +22,15 @@ header{
         }
     }
 
-    .logo {
+}
 
-    }
+.logo {
+    /* grid-area: contentleft; */
+    max-width: 200px;
+    grid-column: content-start;
+}
+
+nav {
+    grid-column: content-center;
+    /* grid-area: contentright; */
 }

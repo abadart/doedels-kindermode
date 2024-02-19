@@ -28,14 +28,3 @@ body {
         --min-content-width: 80%;
     }
 }
-
-.logo {
-    /* grid-area: contentleft; */
-    max-width: 200px;
-    grid-column: content-start;
-}
-
-nav {
-    grid-column: content-center;
-    /* grid-area: contentright; */
-}

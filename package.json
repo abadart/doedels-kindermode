@@ -4,8 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "bundle exec jekyll serve --incremental"
+    "dev": "browser-sync start --server '' --files ''",
+    "build": "postcss assets/css/main.css > build/assets/main.min.css"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "cssnano": "^6.0.3",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.0.1"
+  }
 }
