@@ -2,3 +2,15 @@
     padding: 1rem;
     background-color: var(--bs-gray-400);
 }
+
+
+.location-map {
+    grid-column: page;
+    width: 100%;
+    height: 250px;
+    margin: auto 0 0 0;
+}
+
+#map {
+    height: 100%;
+}

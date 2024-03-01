@@ -1,8 +1,14 @@
+html {
+    overflow-x: hidden;
+    }
+
 body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
 }
 
 header {
@@ -18,21 +24,24 @@ footer {
 }
 
 .base-grid {
-    --min: calc(100% - (7 * var(--gutter))) / 6;
-    --max: calc(1200px - (5 * var(--gutter))) / 6;
+    --min: calc(100% - (2 * var(--gutter)));
+    --max: calc(1200px - (2 * var(--gutter)));
 
+    align-items: start;
     display: grid;
     gap: var(--gutter);
-    grid-template-columns: 1fr min(var(--min), var(--max)) min(var(--min), var(--max)) min(var(--min), var(--max)) min(var(--min), var(--max)) min(var(--min), var(--max)) min(var(--min), var(--max)) 1fr ;
-    align-items: start;
-
+    grid-template-columns: [page-start] 1fr [center-start] min(var(--min), var(--max)) [center-end] 1fr [page-end] ;
+    
     @media (min-width: 575px) {
-        --min: 70% / 6;
+        --min: 80%;
+    } 
+
+    @media (min-width: 768px) {
+        --min: 70%
     }
 }
 
-main div {
-    grid-column: 2/8;
-    height: 100px;
-    background-color: red;
+.base-grid .base-wrapper {
+    grid-column: center;
+    position: relative;
 }
