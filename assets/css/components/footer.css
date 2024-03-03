@@ -1,5 +1,6 @@
 footer {
-    background-color: var(--clr-bg-green);
+    border-top: 1px solid var(--clr-bg-green);
+    background-color: var(--clr-bg-green-solid);
     min-height: 100px;
 
     section {

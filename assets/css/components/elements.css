@@ -3,7 +3,6 @@
     background-color: var(--bs-gray-400);
 }
 
-
 .location-map {
     grid-column: page;
     width: 100%;

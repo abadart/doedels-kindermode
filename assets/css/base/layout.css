@@ -33,11 +33,15 @@ footer {
     grid-template-columns: [page-start] 1fr [center-start] min(var(--min), var(--max)) [center-end] 1fr [page-end] ;
     
     @media (min-width: 575px) {
-        --min: 80%;
+        --min: 90%;
     } 
 
     @media (min-width: 768px) {
-        --min: 70%
+        --min: 85%
+    }
+
+    @media (min-width: 992px) {
+        --min: 80%
     }
 }
 

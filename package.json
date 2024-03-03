@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "browser-sync start --server '' --files ''",
-    "build": "postcss assets/css/main.css > build/assets/main.min.css"
+    "build": "postcss assets/css/main.css > assets/css/main.min.css"
   },
   "author": "",
   "license": "ISC",
