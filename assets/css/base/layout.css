@@ -45,7 +45,44 @@ footer {
     }
 }
 
-.base-grid .base-wrapper {
+.fifty-fifty {
+    display: grid;
+    gap: var(--gutter);
+    grid-template-columns: 1fr;
+
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.three-thirts {
+    display: grid;
+    gap: var(--gutter);
+    grid-template-columns: 1fr;
+
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+.center-center {
     grid-column: center;
-    position: relative;
+}
+
+.left-center {
+
+}
+
+.center-right {
+    
+}
+
+
+.bg-green {
+    background-color: var(--clr-bg-green);
+}
+
+.block {
+    margin: var(--gutter) auto;
 }

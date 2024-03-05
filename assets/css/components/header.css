@@ -1,6 +1,6 @@
 header {
-    border-bottom: 1px solid var(--clr-bg-green);
-    background-color: var(--clr-bg-green-solid);
+    border-bottom: 1px solid var(--clr-bg-green-solid);
+    background-color: var(--clr-bg-green);
     align-items: center;
     position: relative;
     z-index: 10;
