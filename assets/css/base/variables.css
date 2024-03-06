@@ -15,32 +15,33 @@
     --bs-gray-400: #ced4da;
     --bs-gray-500: #adb5bd;
     --bs-gray-600: #6c757d;
-    --bs-gray-700: #495057;
-    --bs-gray-800: #343a40;
+    --bs-gray-700: #353535;
+    --bs-gray-800: #616161;
     --bs-gray-900: #212529;
 
     --clr-bg-green-solid: rgba(221,229,226,1);
     --clr-bg-green: rgba(141,164,140,0.2);
-    --clr-bg-medium0green: rgba(141,164,140,0.4);
+    --clr-bg-medium-green: rgba(141,164,140,0.4);
     --clr-bg-dark-green: rgba(141,164,140,0.7);
     --clr-bg-blue: rgba(171, 211, 222, 0.2);
     --clr-bg-pink: rgba(196, 99, 142, 0.2);
 
     --gutter: 1rem;
+    --gutter-xs: calc(var(--gutter) / 3);
     --gutter-s: calc(var(--gutter) / 2);
-    --gutter-m: calc(var(--gutter) * 1.5);
-    --gutter-l: calc(var(--gutter) * 2);
-    --gutter-xl: calc(var(--gutter) * 2.5);
+    --gutter-m: calc(var(--gutter) * 2);
+    --gutter-l: calc(var(--gutter) * 2.5);
+    --gutter-xl: calc(var(--gutter) * 3);
 
     --max-content-width: 1320px;
 
     --header-color: var(--bs-gray-800);
     --txt-color: var(--bs-gray-700);
 
-    --fs0: 1rem;
+    --fs0: 1.125rem;
     --fs1: 1.25rem;
-    --fs2: 1.563rem;
-    --fs3: 1.953rem;
+    --fs2: 1.953rem;
+    --fs3: 3.815rem;
 
     /* --bp-s: 575px;
     --bp-m: 768px;

@@ -1,0 +1,34 @@
+.home-intro {
+
+    background-color: var(--clr-bg-blue);
+    
+    .wrapper {
+        grid-column: center;
+        padding: var(--gutter-m) 0;
+    }
+
+    h1 {
+        span {
+        }
+    }
+
+    .intro {
+        order: 0;
+
+        @media (min-width: 768px) {
+            order: 1;
+            margin: auto 0;
+            padding: 0 var(--gutter);
+        }
+    }
+
+    .image-gallery1 {
+        margin: 0 0 var(--gutter-m);
+        order: 1;
+
+        @media (min-width: 768px) {
+            order: 0;
+            margin: var(--gutter) 0;
+        }
+    }
+}

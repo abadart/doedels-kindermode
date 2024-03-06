@@ -16,8 +16,19 @@ h1 {
     font-size: var(--fs3);
     font-weight: 200;
     line-height: 1.25;
-    margin: 0 0 1rem 0;
+    margin: 0 0 2rem 0;
     padding: 0;
+}
+
+h1:has(span) {
+    /* line-height: 1; */
+}
+
+h1 span {
+   line-height: 1;
+   display: block;
+   margin: 0 0 auto 0;
+   font-size: var(--fs2);
 }
 
 h2 {
@@ -31,7 +42,7 @@ h2 {
 
 h3 {
     color: var(--txt-color);
-    font-size: var(--fs1);
+    font-size: var(--fs3);
     font-weight: 200;
     line-height: 1.25;
     margin: 0 0 var(--gutter-m) 0;
