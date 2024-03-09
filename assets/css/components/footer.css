@@ -1,6 +1,4 @@
 footer {
     border-top: 1px solid var(--clr-bg-green-solid);
     background-color: var(--clr-bg-green);
-
-    /* padding: var(--gutter-m); */
 }

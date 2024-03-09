@@ -1,34 +1,104 @@
 .home-intro {
-
     background-color: var(--clr-bg-blue);
-    
-    .wrapper {
-        grid-column: center;
-        padding: var(--gutter-m) 0;
-    }
-
-    h1 {
-        span {
-        }
-    }
 
     .intro {
+        grid-column: content;
         order: 0;
+        padding: var(--space-m) var(--space-m) var(--space-m) var(--space-m);
 
         @media (min-width: 768px) {
+            grid-column: content-center / content-end;
             order: 1;
             margin: auto 0;
-            padding: 0 var(--gutter);
+            padding: 0 0 0 var(--space-xl);
         }
     }
 
-    .image-gallery1 {
-        margin: 0 0 var(--gutter-m);
+    .image-gallery-masonry-3 {
+        grid-column: content;
+
+        margin: 0 0 var(--space-m);
         order: 1;
 
         @media (min-width: 768px) {
+            grid-column: content-start / content-center;
             order: 0;
-            margin: var(--gutter) 0;
+            margin: var(--space-xl) 0;
         }
     }
+}
+
+.mission {
+    align-items: center;
+
+    @media (min-width: 768px) {
+        padding: var(--space-xl) 0;
+    }
+
+    .half-grid-left {
+        grid-column: page;
+
+        @media (min-width: 768px) {
+            grid-column: page-start / content-center;
+        }
+    }
+
+    .txt {
+        grid-column: 1 / -1;
+        margin: var(--space-l) var(--space-m);
+        padding: 0 var(--space-m);
+
+        @media (min-width: 768px) {
+            grid-column: 2 / -1;
+            padding: 0
+        }
+    }
+
+    .half-grid-left {
+        background-color: var(--clr-bg-pink);
+    }
+
+    .image-gallery-single {
+        grid-column: page;
+
+        @media (min-width: 768px) {
+            grid-column: content-center / content-end;
+            margin-left: var(--space-xl);
+        }
+    }
+}
+
+.visit {
+    align-items: center;
+
+    .half-grid-right {
+        grid-column: content;
+        order: 0;
+
+        @media (min-width: 768px) {
+            grid-column: content-center / page-end;
+            order: 1;
+        }
+    }
+
+    .image-gallery-tree-in-a-row {
+        grid-column: page;
+        order: 1;
+
+        @media (min-width: 768px) {
+            grid-column: page-start / content-center;
+            order: 0;
+        }
+    }
+
+    .txt {
+
+        padding: var(--space-l) var(--space-m);
+
+        @media (min-width: 768px) {
+            margin-left: var(--space-xl);
+            padding: 0;
+        }
+    }
+
 }
