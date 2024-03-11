@@ -4,7 +4,6 @@
 }
 
 .location-map {
-    grid-column: page;
     width: 100%;
     height: 250px;
     margin: auto 0 0 0;
@@ -26,7 +25,7 @@
         overflow: hidden;
         height: 100%;
     }
-    
+
     img {
         object-fit: cover;
         width: 100%;
@@ -51,15 +50,19 @@
 .image-gallery-tree-in-a-row {
     display: grid;
     height: 100%;
-    max-height: 350px;
+    max-height: 250px;
     gap: var(--gutter);
     grid-template-columns: 2fr 1fr 1fr;
+
+    @media (min-width: 768px) {
+        max-height: 350px;
+    }
 
     .frame {
         overflow: hidden;
         height: 100%;
     }
-    
+
     img {
         object-fit: cover;
         width: 100%;
@@ -82,8 +85,27 @@
     }
 }
 
-ul.socials {
+.brand-rail {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter);
+    padding: var(--space-l) var(--space-m);
 
+    @media (min-width: 768px) {
+        justify-content: normal;
+        padding: var(--space-xl) var(--space-xl);
+    }
+
+    img {
+        max-width: 120px;
+        max-height: 60px;
+    }
+}
+
+ul.socials {
     display: flex;
     flex-direction: row;
     gap: var(--space-xs);
@@ -114,12 +136,29 @@ ul.socials {
     }
 
     .facebook {
-        mask: url("/assets/icons/facebook.svg") no-repeat 0% 50%;
+        mask: url('/assets/icons/facebook.svg') no-repeat 0% 50%;
         mask-size: 75%;
     }
 
     .instagram {
-        mask: url("/assets/icons/instagram.svg") no-repeat 0% 50%;
+        mask: url('/assets/icons/instagram.svg') no-repeat 0% 50%;
         mask-size: 75%;
     }
 }
+
+.half-grid-left .txt {
+    padding: var(--space-l) var(--space-m);
+
+    @media (min-width: 768px) {
+        padding: 0 var(--space-xl) 0 0;
+    }
+}
+
+.half-grid-right .txt {
+    padding: var(--space-l) var(--space-m);
+
+    @media (min-width: 768px) {
+        padding: 0 0 0 var(--space-xl);
+    }
+}
+

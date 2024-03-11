@@ -1,4 +1,37 @@
 footer {
     border-top: 1px solid var(--clr-bg-green-solid);
     background-color: var(--clr-bg-green);
+    padding: var(--space-xl) 0 var(--space-m) 0;
+
+    h2 {
+        font-size: var(--fs1);
+    }
+
+    .wrapper {
+        grid-column: content;
+        /* align-items: center; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .contact a {
+        display: block;
+    }
+
+    ul.socials {
+        margin-top: var(--space-m);
+    }
+}
+
+.secondary-nav {
+    grid-column: 1 / -1;
+    margin: 0 auto 0 auto;
+
+    ul {
+        display: flex;
+        list-style: none;
+        margin: var(--space-l) 0 0 0;
+        padding: auto;
+        gap: var(--space-m);
+    }
 }

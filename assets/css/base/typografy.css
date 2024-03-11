@@ -54,5 +54,12 @@ p {
     font-size: var(--fs0);
     font-weight: 400;
     line-height: 1.5;
+    margin-bottom: var(--space-m) ;
+}
+
+ol, ul {
+    line-height: 1.5;
     margin-bottom: 1rem;
+    margin: 0 0 var(--space-m) 20px;
+    padding: 0;
 }

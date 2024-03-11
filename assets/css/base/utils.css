@@ -1,22 +1,3 @@
 .assistive {
 
 }
-
-
-/* .switch-order-desktop > *:nth-child(1) {
-    order: ;
-}
-
-.switch-order-desktop > *:nth-child(2) {
-    order: 0;
-} */
-.switch-order-desktop > *:nth-child(1) {
-    order: 1;
-}
-
-.switch-order-desktop > *:nth-child(2) {
-    order: 0;
-}
-@media (min-width: 768px) {
-    
-}
