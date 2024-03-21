@@ -13,7 +13,28 @@
     height: 100%;
 }
 
-.image-gallery-masonry-3 {
+.image-single {
+    height: 100%;
+    max-height: 250px;
+
+    @media (min-width: 768px) {
+        max-height: 350px;
+    }
+
+    @media (min-width: 992px) {
+        max-height: 450px;
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+.image-gallery-v1 {
     height: 100%;
     max-height: 450px;
     display: grid;
@@ -47,7 +68,7 @@
     }
 }
 
-.image-gallery-tree-in-a-row {
+.image-gallery-v2 {
     display: grid;
     height: 100%;
     max-height: 250px;
@@ -70,18 +91,68 @@
     }
 }
 
-.image-gallery-single {
-    height: 100%;
-    max-height: 250px;
+.image-gallery-v3 {
+    grid-column: 1 / -1;
 
-    @media (min-width: 768px) {
-        max-height: 450px;
+    height: 100%;
+    max-height: 450px;
+    display: grid;
+    gap: var(--gutter);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    .frame {
+        overflow: hidden;
+        height: 100%;
     }
 
     img {
         object-fit: cover;
         width: 100%;
         height: 100%;
+    }
+
+    .frame1 {
+        grid-row: 1 / 3;
+    }
+}
+
+.video-gallery-v1 {
+    height: 100%;
+    max-height: 350px;
+    display: grid;
+    gap: var(--gutter);
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    @media (min-width: 768px) {
+        max-height: 450px;
+    }
+
+    .frame {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    img, video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .frame1 {
+        grid-column: 1/1;
+        grid-row: 1 / -1;
+    }
+
+    .frame2 {
+        grid-column: 2/3;
+        grid-row: 1;
+    }
+
+    .frame3 {
+        grid-column: 2/3;
+        grid-row: 2;
     }
 }
 
@@ -146,19 +217,26 @@ ul.socials {
     }
 }
 
-.half-grid-left .txt {
-    padding: var(--space-l) var(--space-m);
+.txt {
+    padding: var(--space-xl) var(--space-l);
 
     @media (min-width: 768px) {
-        padding: 0 var(--space-xl) 0 0;
+        padding: var(--space-xxl);
+    }
+}
+
+.half-grid-left .txt {
+    padding: var(--space-xl) var(--space-l);
+
+    @media (min-width: 768px) {
+        padding: var(--space-xl) var(--space-xl) var(--space-xl) var(--space-l);
     }
 }
 
 .half-grid-right .txt {
-    padding: var(--space-l) var(--space-m);
+    padding: var(--space-xl) var(--space-l);
 
     @media (min-width: 768px) {
-        padding: 0 0 0 var(--space-xl);
+        padding: var(--space-xl) var(--space-l) var(--space-xl) var(--space-xl);
     }
 }
-

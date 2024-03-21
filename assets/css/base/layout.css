@@ -25,8 +25,6 @@ footer {
 
 .base-grid {
 
-    /* --gutter: 10px; */
-
     --nrCols: 12;
     --min-content-widht: 100%; 
     --max-content-width: 1200px;
@@ -40,11 +38,12 @@ footer {
 
     grid-template-columns: [page-start] 1fr [content-start] repeat(calc(var(--nrCols)/2), min(var(--minColSize), var(--maxColSize))) [content-center] repeat(calc(var(--nrCols)/2), min(var(--minColSize), var(--maxColSize))) [content-end] 1fr [page-end];
 
-    @media (min-width: 768px) {
+
+    @media (min-width: 992px) {
         --min-content-widht: 90%;
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
         --min-content-widht: 80%;
     }
 }
