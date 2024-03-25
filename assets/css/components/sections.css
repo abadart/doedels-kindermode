@@ -227,7 +227,6 @@
     }
 
     .txt {
-        
         grid-column: page;
 
         @media (min-width: 768px) {
@@ -256,7 +255,13 @@
 
 
 .location-map {
-    iframe {
+    margin: var(--space-m) 0 0 0;
+
+    @media (min-width: 768px) {
+        margin: var(--space-xxl) 0 0 0;
+    }
+
+    .image-map {
         grid-column: page;
     }
 }
