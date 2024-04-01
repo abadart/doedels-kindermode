@@ -1,0 +1,41 @@
+
+ul.socials {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-xs);
+    margin: 0;
+    padding: 0;
+
+    li {
+        border: none;
+        width: auto;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        width: 38px;
+        height: 38px;
+        display: inline-flex;
+        overflow: hidden;
+        background-color: var(--bs-gray-600);
+        text-indent: -999px;
+        transition: background-color 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+        &:hover {
+            background-color: var(--clr-bg-green);
+        }
+    }
+
+    .facebook {
+        mask: url('/assets/icons/facebook.svg') no-repeat 0% 50%;
+        mask-size: 75%;
+    }
+
+    .instagram {
+        mask: url('/assets/icons/instagram.svg') no-repeat 0% 50%;
+        mask-size: 75%;
+    }
+}

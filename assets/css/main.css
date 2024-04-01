@@ -1,6 +1,7 @@
 @import url('./base/reset.css');
 @import url('./base/variables.css');
 @import url('./base/typografy.css');
+@import url('./base/base.css');
 @import url('./base/layout.css');
 @import url('./base/utils.css');
 
@@ -8,3 +9,5 @@
 @import url('./components/footer.css');
 @import url('./components/sections.css');
 @import url('./components/elements.css');
+@import url('./components/newsletterform.css');
+@import url('./components/socials.css');

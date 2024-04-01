@@ -1,0 +1,15 @@
+ol, ul {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    margin: 0 0 var(--space-m) 20px;
+    padding: 0;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+
+    dt {
+        padding-right: var(--space-m);
+    }
+}

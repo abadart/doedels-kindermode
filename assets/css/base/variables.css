@@ -26,15 +26,17 @@
     --clr-bg-blue: rgba(238, 246, 248, 1);
     --clr-bg-pink: rgba(253, 240, 246, 1);
 
+    --clr-txt-error: #ffffff;
+    --clr-background-error: #bf5252;
+
     --gutter: 1rem;
 
-    --space-xs: calc(var(--gutter) / 3);
-    --space-s: calc(var(--gutter) / 4);
+    --space-xs: calc(var(--gutter) / 4);
+    --space-s: calc(var(--gutter) / 3);
     --space-m: var(--gutter);
     --space-l: calc(var(--gutter) * 1.5);
     --space-xl: calc(var(--gutter) * 3);
     --space-xxl: calc(var(--gutter) * 4);
-
 
     --header-color: var(--bs-gray-800);
     --txt-color: var(--bs-gray-700);
