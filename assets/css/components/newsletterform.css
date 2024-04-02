@@ -50,10 +50,9 @@
             }
         }
         
-        &:user-valid {
+        /* &:user-valid {
             background-color: green;
-        }
-        
+        } */
         
     }
 
