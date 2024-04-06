@@ -29,7 +29,7 @@ window.addEventListener('keyup', (e) => {
 // Mailchimp post and validation
 const newsLetterForm = document.forms.nlForm;
 const formResponseElm = document.querySelector('.newsletter-form-cta');
-const mc_c = 'jQuery19003303681766368718_';
+const mc_c = 'jQuery190045426647972713097_';
 
 newsLetterForm.addEventListener('submit', (event) => {
     event.preventDefault();
