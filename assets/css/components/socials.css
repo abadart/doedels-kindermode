@@ -30,12 +30,12 @@ ul.socials {
     }
 
     .facebook {
-        mask: url('/assets/icons/facebook.svg') no-repeat 0% 50%;
+        mask: url('../../icons/facebook.svg') no-repeat 0% 50%;
         mask-size: 75%;
     }
 
     .instagram {
-        mask: url('/assets/icons/instagram.svg') no-repeat 0% 50%;
+        mask: url('../../icons/instagram.svg') no-repeat 0% 50%;
         mask-size: 75%;
     }
 }
