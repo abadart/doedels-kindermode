@@ -224,3 +224,32 @@
         padding: var(--space-xl) var(--space-l) var(--space-xl) var(--space-l);
     }
 }
+
+.decoration1 {
+    position: absolute;
+    right: 0;
+    bottom: 45%;
+    rotate: -30deg;
+    transform: translateX(50%);
+    z-index: 0;
+
+    @media (min-width: 768px) {
+        bottom: 0%;
+    }
+}
+
+
+.decoration2 {
+    position: absolute;
+    left: 0;
+    bottom: -10%;
+    rotate: 20deg;
+    transform: translateX(-30%);
+    z-index: 0;
+    max-width: 140px;
+
+    @media (min-width: 768px) {
+        bottom: -30%;
+        max-width: 230px;
+    }
+}

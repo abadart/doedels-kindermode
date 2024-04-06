@@ -1,6 +1,7 @@
 .home-intro {
     background-color: var(--clr-bg-blue);
     padding: var(--space-m) 0;
+    position: relative;
 
     @media (min-width: 768px) {
         padding: var(--space-xxl) 0;
@@ -10,6 +11,7 @@
         grid-column: content;
         order: 0;
         padding: var(--space-m);
+        z-index: 1;
 
         @media (min-width: 768px) {
             grid-column: content-center / content-end;
@@ -134,6 +136,7 @@
 
 .collection {
     align-items: center;
+    position: relative;
 
     @media (min-width: 768px) {
         padding: var(--space-xxl) 0 0 0;
@@ -168,6 +171,8 @@
 
 .brands {
     align-items: center;
+    position: relative;
+    z-index: 1;
     
     @media (min-width: 768px) {
         padding: var(--space-xxl) 0 0 0;
