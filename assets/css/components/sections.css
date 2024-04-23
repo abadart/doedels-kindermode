@@ -1,272 +1,73 @@
-.home-intro {
-    background-color: var(--clr-bg-blue);
-    padding: var(--space-m) 0;
-    position: relative;
+/* Specific section styling */
+main .grid {
+  --sectionMargin: 0 0 calc(var(--blockMargin) * 2) 0;
+  position: relative;
 
-    @media (min-width: 768px) {
-        padding: var(--space-xxl) 0;
-    }
-
-    .intro {
-        grid-column: content;
-        order: 0;
-        padding: var(--space-m);
-        z-index: 1;
-
-        @media (min-width: 768px) {
-            grid-column: content-center / content-end;
-            order: 1;
-            margin: auto 0;
-            padding: 0 0 0 var(--space-l);
-        }
-    }
-
-    .video-gallery-v1 {
-        grid-column: content;
-
-        margin: var(--space-m) 0 0 0;
-        order: 1;
-
-        @media (min-width: 768px) {
-            grid-column: content-start / content-center;
-            order: 0;
-            margin: 0;
-            padding: 0 var(--space-l) 0 0;
-        }
-    }
+  @media (min-width: 768px) {
+    margin: var(--sectionMargin);
+  }
 }
 
-.mission {
+/* extra margin class for txt blocks */
+.col-duo {
+  .txt {
+    padding: var(--blockMargin) 0;
 
-    @media (min-width: 768px) {
-        padding: var(--space-xxl) 0 0 0;
+    @media (min-width: 575px) {
+      padding: calc(var(--blockMargin) * 2);
     }
 
-    .half-grid-left {
-        background-color: var(--clr-bg-pink);
-        grid-column: page;
+    @media (min-width: 768px) {
+      padding: var(--blockMargin);
+      margin-top: var(--blockMargin);
+      margin-bottom: var(--blockMargin);
+    }
+  }
 
-        @media (min-width: 768px) {
-            grid-column: page-start / content-center;
-            margin: var(--space-xxl) var(--space-l) var(--space-xxl) auto; 
-        }
+  &[class*='bg-']:has(.txt) {
+    @media (min-width: 768px) {
+      margin-top: calc(var(--blockMargin) * 2);
+      margin-bottom: calc(var(--blockMargin) * 2);
     }
 
     .txt {
-        grid-column: 1 / -1;
-
-        @media (min-width: 768px) {
-            grid-column: 2 / -1;
-        }
+      @media (min-width: 768px) {
+        padding: 0 calc(var(--blockMargin) * 2);
+        margin-top: calc(var(--blockMargin) * 2);
+        margin-bottom: calc(var(--blockMargin) * 2);
+      }
     }
-
-    .image-frame {
- 
-        grid-column: page;
-        width: 100%;
-        height: 100%;
-
-        .frame {
-            display: block;
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            max-height: 250px;
-
-            @media (min-width: 768px) {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                max-height: 100%;
-            }
-        }
-
-        @media (min-width: 768px) {
-            grid-column: content-center / page-end;
-            width: 100%;
-            height: 100%;
-            margin: 0 0 0 var(--space-l);
-        }
-    }
+  }
 }
 
-.the-store {
-    align-items: center;
+.col-trio .txt {
+  padding: var(--blockMargin) 0;
 
-    @media (min-width: 768px) {
-        padding: var(--space-xxl) 0 0 0;
-    }
+  @media (min-width: 575px) {
+    padding: calc(var(--blockMargin) * 2);
+  }
 
-    .half-grid-right {
-        grid-column: page;
-        order: 0;
-
-        @media (min-width: 768px) {
-            grid-column: content-center / page-end;
-            order: 1;
-        }
-    }
-
-    .txt {
-        grid-column: 1 / -1;
-
-        @media (min-width: 768px) {
-            grid-column: 1 / 2;
-        }
-    }
-
-    .image-gallery-v2 {
-        grid-column: page;
-        order: 1;
-
-        @media (min-width: 768px) {
-            grid-column: page-start / content-center;
-            order: 0;
-            padding: 0 var(--space-l) 0 0 ;
-        }
-    }
+  @media (min-width: 768px) {
+    padding: var(--blockMargin);
+    margin-top: var(--blockMargin);
+    margin-bottom: var(--blockMargin);
+  }
 }
 
+section.home-intro {
 
-.collection {
-    align-items: center;
-    position: relative;
+  @media (min-width: 768px) {
+    padding: calc(var(--blockMargin) * 2) 0;
+  }
 
+  /* The videogallery should not overflow the content column on destop */
+  .gallery {
     @media (min-width: 768px) {
-        padding: var(--space-xxl) 0 0 0;
+      --grid-column: content-start/content-center;
     }
-
-    .half-grid-left {
-        grid-column: page;
-
-        @media (min-width: 768px) {
-            grid-column: page-start / content-center;
-        }
-    }
-    
-    .txt {
-        grid-column: 1 / -1;
-
-        @media (min-width: 768px) {
-            grid-column: 2 / -1;
-        }
-    }
-
-    .image-gallery-v3 {
-        grid-column: page;
-
-        @media (min-width: 768px) {
-            grid-column: content-center / page-end;
-            padding: 0 0 0 var(--space-l);
-        }
-    }
-
+  }
 }
 
-.brands {
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    
-    @media (min-width: 768px) {
-        padding: var(--space-xxl) 0 0 0;
-    }
-
-    .brand-rail {
-        background-color: var(--clr-bg-green);
-        grid-column: page;
-        order: 1;
-
-        @media (min-width: 768px) {
-            grid-column: page-start / content-center;
-            order: 0;
-            margin: 0 var(--space-l) 0 0;
-        }
-    }
-
-    .half-grid-right {
-        grid-column: page;
-        order: 0;
-
-        @media (min-width: 768px) {
-            grid-column: content-center / page-end;
-            order: 1;
-        }
-    }
-
-    .txt {
-        grid-column: 1 / -1;
-
-        @media (min-width: 768px) {
-            grid-column: 1 / 2;
-        }
-    }
-}
-
-
-.privateshopping {
-    
-    background-color: var(--clr-bg-blue);
-    align-items: center;
-
-    @media (min-width: 768px) {
-        margin: var(--space-xxl) 0 0 0;
-    }
-
-    .image-left {
-        grid-column: page;
-
-        @media (min-width: 768px) {
-            grid-column: 1 / 8;
-        }
-
-        @media (min-width: 992px) {
-            grid-column: 1 / 4;
-        }
-    }
-
-    .txt {
-        grid-column: page;
-
-        @media (min-width: 768px) {
-            grid-column: 8 / 15;
-        }
-
-        @media (min-width: 992px) {
-            grid-column: 4 / 12;
-        }
-    }
-    
-    .image-right {
-        grid-column: page;
-
-        @media (min-width: 768px) {
-            /* grid-column: 12 / 15; */
-            grid-column: page;
-        }
-
-        @media (min-width: 992px) {
-            grid-column: 12 / 15;
-        }
-    }
-
-}
-
-
-.location-map {
-    margin: var(--space-m) 0 0 0;
-
-    @media (min-width: 768px) {
-        margin: var(--space-xxl) 0 0 0;
-    }
-
-    .image-map {
-        grid-column: page;
-    }
+section.privateshopping {
+  --sectionMargin: 0;
 }

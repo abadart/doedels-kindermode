@@ -1,0 +1,60 @@
+.btn {
+  padding: 1rem;
+  background-color: var(--bs-gray-400);
+}
+
+.txt {
+  --grid-column: content;
+}
+
+.image-single {
+  height: 100%;
+  max-height: 250px;
+
+  @media (min-width: 768px) {
+    max-height: 350px;
+  }
+
+  @media (min-width: 992px) {
+    max-height: 450px;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.doedel1 {
+  position: absolute;
+  right: 0;
+  bottom: 45%;
+  rotate: -30deg;
+  transform: translateX(50%);
+  z-index: 0;
+
+  @media (min-width: 768px) {
+    bottom: 0%;
+  }
+}
+
+.doedel2 {
+  position: absolute;
+  left: 0;
+  bottom: -10%;
+  rotate: 20deg;
+  transform: translateX(-30%);
+  z-index: 0;
+  max-width: 140px;
+
+  @media (min-width: 768px) {
+    bottom: -40%;
+    max-width: 160px;
+  }
+
+  @media (min-width: 992px) {
+    bottom: -50%;
+    max-width: 220px;
+  }
+}

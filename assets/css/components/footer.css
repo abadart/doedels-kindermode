@@ -1,7 +1,7 @@
 footer {
     border-top: 1px solid var(--clr-bg-green-solid);
     background-color: var(--clr-bg-green);
-    padding: var(--space-xl) var(--space-m) ;
+    padding: var(--space-xl) 0 ;
 
     @media (min-width: 768px) {
         padding: var(--space-xl) 0 var(--space-m) 0;
@@ -10,16 +10,17 @@ footer {
     h2 {
         font-size: var(--fs1);
     }
-
     
+
     .contact {
+        min-width: 0;
         grid-column: content;
         
-        @media (min-width: 768px) {
-            grid-column: 3 / 8;
+        @media (min-width: 575px) {
+            grid-column: 2 / 8;
         }
 
-        @media (min-width: 992px) {
+        @media (min-width: 768px) { 
             grid-column: 2 / 6;
         }
 
@@ -32,13 +33,14 @@ footer {
     }
 
     .hours {
+        min-width: 0;
         grid-column: content;
 
-        @media (min-width: 768px) {
-            grid-column: 8 / 15;
+        @media (min-width: 575px) {
+            grid-column: 8 / 14;
         }
 
-        @media (min-width: 992px) {
+        @media (min-width: 768px) {
             grid-column: 6 / 10;
         }
 
@@ -48,19 +50,16 @@ footer {
     }
 
     .newsletter {
+        min-width: 0;
         grid-column: content;
 
         @media (min-width: 768px) {
-            grid-column: 3 / 13;
-        }
-
-        @media (min-width: 992px) {
             grid-column: 10 / 14;
         }
     }
 
     .secondary-nav {
-        grid-column: 1 / -1;
+        grid-column: content;
         margin: 0 auto 0 auto;
 
         ul {

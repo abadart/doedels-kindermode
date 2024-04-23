@@ -1,0 +1,167 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+header {
+  grid-row: 1;
+}
+
+main {
+  grid-row: 2;
+}
+
+footer {
+  grid-row: 3;
+}
+
+.grid {
+  --cols: 12;
+  --cols-per-part: 6;
+  --padding-outside: var(--gutter);
+  --col-padding-space: ((var(--padding-outside) * 2) / var(--cols));
+  --min-col-width: 100% / var(--cols);
+  --max-col-width: var(--max-content-width) / var(--cols);
+
+  display: grid;
+  grid-template-columns:
+    [fullwidth-start] minmax(var(--padding-outside), 1fr) [content-start col-left-start] repeat(var(--cols-per-part), min(var(--min-col-width) - var(--col-padding-space), var(--max-col-width))) [col-left-end content-center col-right-start] repeat(
+      var(--cols-per-part),
+      min(var(--min-col-width) - var(--col-padding-space), var(--max-col-width))
+    )
+    [col-right-end content-end] minmax(var(--padding-outside), 1fr) [fullwidth-end];
+}
+
+.bg-green {
+  background-color: var(--clr-bg-green);
+}
+
+.bg-blue {
+  background-color: var(--clr-bg-blue);
+}
+
+.bg-pink {
+  background-color: var(--clr-bg-pink);
+}
+
+/* Position of generic grid items */
+.col-duo {
+  min-width: 0;
+  align-self: center;
+  height: min-content;
+  grid-column: var(--grid-column, fullwidth);
+  display: grid;
+  grid-template-columns: subgrid;
+
+  &.left {
+    @media (min-width: 768px) {
+      margin-right: var(--blockMargin);
+      --grid-column: fullwidth-start / content-center;
+    }
+
+    .txt {
+      grid-column: var(--grid-column, content);
+      @media (min-width: 768px) {
+        --grid-column: col-left;
+      }
+    }
+  }
+
+  &.right {
+    @media (min-width: 768px) {
+      --grid-column: content-center / fullwidth-end;
+      margin-left: var(--blockMargin);
+    }
+
+    .txt {
+      grid-column: var(--grid-column, content);
+      @media (min-width: 768px) {
+        --grid-column: col-right;
+      }
+    }
+  }
+}
+
+.col-trio {
+  min-width: 0;
+  align-self: center;
+  height: min-content;
+  grid-column: var(--grid-column, fullwidth);
+
+  &.left {
+    @media (min-width: 768px) {
+      --grid-column: 1 / 5;
+    }
+  }
+
+  &.center {
+    @media (min-width: 768px) {
+      --grid-column: 5 / 11;
+    }
+  }
+
+  &.right {
+    @media (min-width: 768px) {
+      --grid-column: 11 / 15;
+    }
+  }
+}
+
+.gallery {
+  grid-column: var(--grid-column, fullwidth);
+
+  &.left {
+    @media (min-width: 768px) {
+      --grid-column: fullwidth-start / content-center;
+      margin-right: var(--blockMargin);
+    }
+  }
+
+  &.right {
+    @media (min-width: 768px) {
+      --grid-column: content-center / fullwidth-end;
+      margin-left: var(--blockMargin);
+    }
+  }
+
+  &.col-trio {
+    &.left {
+      @media (min-width: 768px) {
+        --grid-column: 1 / 5;
+      }
+    }
+  
+    &.right {
+      @media (min-width: 768px) {
+        --grid-column: 11 / 15;
+      }
+    }
+  }
+}
+
+/* Change visual order on desktop for a11y */
+.grid {
+  &:has(.right + .left) {
+    .right {
+      order: 0;
+      @media (min-width: 768px) {
+        order: 1;
+      }
+    }
+
+    .left {
+      order: 1;
+      @media (min-width: 768px) {
+        order: 0;
+      }
+    }
+  }
+}
