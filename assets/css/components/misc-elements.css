@@ -5,6 +5,7 @@
 
 .txt {
   --grid-column: content;
+  max-width: 80ch;
 }
 
 .image-single {

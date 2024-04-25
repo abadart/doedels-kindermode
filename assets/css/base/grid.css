@@ -52,6 +52,37 @@ footer {
   background-color: var(--clr-bg-pink);
 }
 
+/* Generic blocks */
+
+/* .s2 {
+  --grid-start: 2;
+}
+
+.third {
+  background-color: green;
+  grid-column-start: var(--grid-start);
+  grid-column-end: span 3;
+}
+
+.quarter {
+  background-color: orange;
+  grid-column-start: var(--grid-start);
+  grid-column-end: span 4;
+}
+
+.half {
+  background-color: purple;
+  grid-column-start: var(--grid-start);
+  grid-column-end: span 6;
+}
+
+.full {
+  background-color: blue;
+  grid-column-start: var(--grid-start);
+  grid-column-end: span 12;
+} */
+
+
 /* Position of generic grid items */
 .col-duo {
   min-width: 0;
@@ -62,28 +93,28 @@ footer {
   grid-template-columns: subgrid;
 
   &.left {
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       margin-right: var(--blockMargin);
       --grid-column: fullwidth-start / content-center;
     }
 
     .txt {
       grid-column: var(--grid-column, content);
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         --grid-column: col-left;
       }
     }
   }
 
   &.right {
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       --grid-column: content-center / fullwidth-end;
       margin-left: var(--blockMargin);
     }
 
     .txt {
       grid-column: var(--grid-column, content);
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         --grid-column: col-right;
       }
     }
@@ -97,20 +128,40 @@ footer {
   grid-column: var(--grid-column, fullwidth);
 
   &.left {
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       --grid-column: 1 / 5;
     }
   }
 
   &.center {
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       --grid-column: 5 / 11;
     }
   }
 
   &.right {
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       --grid-column: 11 / 15;
+    }
+  }
+}
+
+
+.col-half {
+  min-width: 0;
+  align-self: center;
+  height: min-content;
+  grid-column: var(--grid-column, fullwidth);
+
+  &.left {
+    @media (min-width: 992px) {
+      --grid-column: 2 / 10;
+    }
+  }
+
+  &.center {
+    @media (min-width: 992px) {
+      --grid-column: 2 / 12;
     }
   }
 }
@@ -119,28 +170,35 @@ footer {
   grid-column: var(--grid-column, fullwidth);
 
   &.left {
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       --grid-column: fullwidth-start / content-center;
       margin-right: var(--blockMargin);
     }
   }
 
   &.right {
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       --grid-column: content-center / fullwidth-end;
       margin-left: var(--blockMargin);
     }
   }
 
+  
   &.col-trio {
     &.left {
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         --grid-column: 1 / 5;
       }
     }
-  
+    
+    &.center {
+      @media (min-width: 992px) {
+        --grid-column: 5 / 11;
+      }
+    }
+
     &.right {
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         --grid-column: 11 / 15;
       }
     }
@@ -152,14 +210,14 @@ footer {
   &:has(.right + .left) {
     .right {
       order: 0;
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         order: 1;
       }
     }
 
     .left {
       order: 1;
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         order: 0;
       }
     }
