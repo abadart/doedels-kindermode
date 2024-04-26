@@ -31,8 +31,7 @@
   position: absolute;
   right: 0;
   bottom: 45%;
-  rotate: -30deg;
-  transform: translateX(50%);
+  transform: rotate(-30deg) translateX(50%);
   z-index: 0;
 
   @media (min-width: 768px) {
@@ -44,8 +43,7 @@
   position: absolute;
   left: 0;
   bottom: -10%;
-  rotate: 20deg;
-  transform: translateX(-30%);
+  transform: rotate(20deg) translateX(-30%);
   z-index: 0;
   max-width: 140px;
 

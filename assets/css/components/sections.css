@@ -113,20 +113,20 @@ section:has(+ section.location-map) {
 
   @media (min-width: 992px) {
     order: 1;
-    grid-column: 5 / 12;
+    grid-column: 6 / -1;
     margin-top: calc(var(--blockMargin) * 2);
     margin-bottom: calc(var(--blockMargin) * 2);
-    margin-right: calc(var(--blockMargin) * 2);
+    margin-left: calc(var(--blockMargin) * 2);
   }
 
   .txt {
-    grid-column: 1 / -1;
+    grid-column: 1 / content-end;
     padding: var(--blockMargin);
 
     @media (min-width: 992px) {
-      margin-top: calc(var(--blockMargin) * 2);
-      margin-right: calc(var(--blockMargin) * 2);
-      margin-bottom: calc(var(--blockMargin) * 2);
+      /* margin-top: calc(var(--blockMargin) * 2); */
+      /* margin-left: calc(var(--blockMargin) * 2); */
+      /* margin-bottom: calc(var(--blockMargin) * 2); */
     }
   }
 }
@@ -135,7 +135,7 @@ section:has(+ section.location-map) {
   grid-column: fullwidth;
   order: 0;
   @media (min-width: 992px) {
-    grid-column: 1 / 5;
+    grid-column: 1 / 6;
     order: 0;
   }
 }

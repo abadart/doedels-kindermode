@@ -1,79 +1,79 @@
 footer {
-    border-top: 1px solid var(--clr-bg-green-solid);
-    background-color: var(--clr-bg-green);
-    padding: var(--space-xl) 0 ;
+  border-top: 1px solid var(--clr-bg-green-solid);
+  background-color: var(--clr-bg-green);
+  padding: var(--space-xl) 0;
+
+  @media (min-width: 768px) {
+    padding: var(--space-xl) 0 var(--space-m) 0;
+  }
+
+  h2 {
+    font-size: var(--fs1);
+  }
+
+
+  .contact {
+    min-width: 0;
+    grid-column: content;
+
+    @media (min-width: 575px) {
+      grid-column: 2 / 8;
+    }
 
     @media (min-width: 768px) {
-        padding: var(--space-xl) 0 var(--space-m) 0;
+      grid-column: 2 / 6;
     }
 
-    h2 {
-        font-size: var(--fs1);
-    }
-    
-
-    .contact {
-        min-width: 0;
-        grid-column: content;
-        
-        @media (min-width: 575px) {
-            grid-column: 2 / 8;
-        }
-
-        @media (min-width: 768px) { 
-            grid-column: 2 / 6;
-        }
-
-        ul.socials {
-            margin-top: var(--space-m);
-        }
-        a {
-            display: block;
-        }
+    ul.socials {
+      margin-top: var(--space-m);
     }
 
-    .hours {
-        min-width: 0;
-        grid-column: content;
+    a {
+      display: block;
+    }
+  }
 
-        @media (min-width: 575px) {
-            grid-column: 8 / 14;
-        }
+  .hours {
+    min-width: 0;
+    grid-column: content;
 
-        @media (min-width: 768px) {
-            grid-column: 6 / 10;
-        }
-
-        ul {
-            list-style: disc;
-        }
+    @media (min-width: 575px) {
+      grid-column: 8 / 14;
     }
 
-    .newsletter {
-        min-width: 0;
-        grid-column: content;
-
-        @media (min-width: 768px) {
-            grid-column: 10 / 14;
-        }
+    @media (min-width: 768px) {
+      grid-column: 6 / 10;
     }
 
-    .secondary-nav {
-        grid-column: content;
-        margin: 0 auto 0 auto;
-
-        ul {
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-            margin: var(--space-l) 0 0 0;
-            padding: auto;
-        }
-
-        li {
-            padding: var(--space-s);
-        }
+    ul {
+      list-style: disc;
     }
+  }
+
+  .newsletter {
+    min-width: 0;
+    grid-column: content;
+
+    @media (min-width: 768px) {
+      grid-column: 10 / 14;
+    }
+  }
+
+  .secondary-nav {
+    grid-column: content;
+    margin: 0 auto 0 auto;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: var(--space-l) 0 0 0;
+      padding: 0;
+    }
+
+    li {
+      padding: var(--space-s);
+    }
+  }
 
 }
-
