@@ -8,8 +8,10 @@ ol, ul {
 dl {
     display: grid;
     grid-template-columns: min-content 1fr;
-
+    line-height: 1.5;
+    margin-bottom: var(--space-m);
     dt {
         padding-right: var(--space-m);
+        
     }
 }

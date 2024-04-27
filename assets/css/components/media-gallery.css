@@ -1,6 +1,8 @@
 .gallery {
   height: 100%;
   min-height: 250px;
+  display: grid;
+  grid-template-columns: 1fr;
 
   .frame {
     display: block;
@@ -20,6 +22,17 @@
     min-height: 100%;
     height: auto;
     width: auto;
+  }
+}
+
+.image-gallery {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: var(--gutter);
+  min-height: 150px;
+  margin-top: calc(var(--gutter) * 2);
+  @media (min-width: 992px) {
+    margin-top: 0;
   }
 }
 
@@ -51,7 +64,7 @@
   height: 100%;
   min-height: 250px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     min-height: auto;
   }
 

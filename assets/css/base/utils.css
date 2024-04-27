@@ -8,3 +8,15 @@
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+.bg-green {
+  background-color: var(--clr-bg-green);
+}
+
+.bg-blue {
+  background-color: var(--clr-bg-blue);
+}
+
+.bg-pink {
+  background-color: var(--clr-bg-pink);
+}

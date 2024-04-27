@@ -8,65 +8,6 @@ main .grid {
   }
 }
 
-/* extra margin class for txt blocks */
-.col-duo {
-  .txt {
-    padding: var(--blockMargin) 0;
-
-    @media (min-width: 575px) {
-      padding: calc(var(--blockMargin) * 2);
-    }
-
-    @media (min-width: 768px) {
-      padding: var(--blockMargin);
-      margin-top: var(--blockMargin);
-      margin-bottom: var(--blockMargin);
-    }
-  }
-
-  &[class*='bg-']:has(.txt) {
-    @media (min-width: 768px) {
-      margin-top: calc(var(--blockMargin) * 2);
-      margin-bottom: calc(var(--blockMargin) * 2);
-    }
-
-    .txt {
-      @media (min-width: 768px) {
-        padding: 0 calc(var(--blockMargin) * 2);
-        margin-top: calc(var(--blockMargin) * 2);
-        margin-bottom: calc(var(--blockMargin) * 2);
-      }
-    }
-  }
-}
-
-.col-trio .txt {
-  padding: var(--blockMargin) 0;
-
-  @media (min-width: 575px) {
-    padding: calc(var(--blockMargin) * 2);
-  }
-
-  @media (min-width: 768px) {
-    padding: var(--blockMargin);
-    margin-top: var(--blockMargin);
-    margin-bottom: var(--blockMargin);
-  }
-}
-
-section.home-intro {
-
-  @media (min-width: 768px) {
-    padding: calc(var(--blockMargin) * 2) 0;
-  }
-
-  /* The videogallery should not overflow the content column on destop */
-  .gallery {
-    @media (min-width: 768px) {
-      --grid-column: content-start/content-center;
-    }
-  }
-}
 
 /* No margin before location map */
 section:has(+ section.location-map) {
@@ -75,7 +16,7 @@ section:has(+ section.location-map) {
 
 
 .doedels-intro {
-  grid-column: fullwidth;
+  /* grid-column: fullwidth;
   display: grid;
   grid-template-columns: subgrid;
 
@@ -95,18 +36,18 @@ section:has(+ section.location-map) {
       margin-right: calc(var(--blockMargin) * 2);
       margin-bottom: calc(var(--blockMargin) * 2);
     }
-  }
+  } */
 }
 
 .doedels-intro-img {
-  grid-column: fullwidth;
+  /* grid-column: fullwidth;
   @media (min-width: 992px) {
     grid-column: 10 / -1;
-  }
+  } */
 }
 
 .doedels-origin {
-  grid-column: fullwidth;
+  /* grid-column: fullwidth;
   display: grid;
   grid-template-columns: subgrid;
   order: 1;
@@ -128,14 +69,14 @@ section:has(+ section.location-map) {
       /* margin-left: calc(var(--blockMargin) * 2); */
       /* margin-bottom: calc(var(--blockMargin) * 2); */
     }
-  }
+  } */
 }
 
 .doedels-origin-img {
-  grid-column: fullwidth;
+  /* grid-column: fullwidth;
   order: 0;
   @media (min-width: 992px) {
     grid-column: 1 / 6;
     order: 0;
-  }
+  } */
 }

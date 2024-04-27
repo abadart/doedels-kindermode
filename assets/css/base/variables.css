@@ -54,9 +54,12 @@
     --bp-xl: 1200px;
     --bp-xxl: 1400px;
 
-    --blockMargin: var(--space-m);
+    --blockMargin: 0;
 
     @media (min-width: 992px) {
+        --blockMargin: var(--space-m);
+    }
+    @media (min-width: 1200px) {
         --blockMargin: var(--space-l);
     }
 }

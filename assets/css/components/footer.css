@@ -11,6 +11,9 @@ footer {
     font-size: var(--fs1);
   }
 
+  section {
+    margin-bottom: var(--space-l);
+  }
 
   .contact {
     min-width: 0;
