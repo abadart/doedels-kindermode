@@ -57,6 +57,10 @@ footer {
   --col-start: 2;
 }
 
+.cp-3 {
+  --col-start: 3;
+}
+
 .cp-6 {
   --col-start: 6;
 }
@@ -96,6 +100,10 @@ footer {
 
 .cs-9 {
   --col-span: 9;
+}
+
+.cs-10 {
+  --col-span: 10;
 }
 
 /* // Generic block margin */
