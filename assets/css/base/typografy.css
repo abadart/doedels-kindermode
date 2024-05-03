@@ -15,19 +15,15 @@ h1 {
     color: var(--txt-color);
     font-size: var(--fs4);
     font-weight: 100;
-    line-height: 1.125;
-    margin: 0 0 2rem -5px;
-    padding: 0;
-}
-
-h1:has(span) {
+    line-height: 1;
     margin: 0 0 1rem -5px;
+    padding: 0;
 }
 
 h1 span {
    line-height: 1;
    display: block;
-   margin: -10px 0 auto 4px;
+   margin: -5px 0 auto 4px;
    font-size: var(--fs1);
 }
 

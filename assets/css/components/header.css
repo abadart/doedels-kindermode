@@ -116,13 +116,14 @@ header {
   }
 
   a {
-    text-decoration: none;
     display: inline-flex;
+    color: var(--link-color);
     font-size: 1.125rem;
     padding: var(--gutter) 0;
     position: relative;
+    text-decoration: none;
     width: 100%;
-
+    
     @media (min-width: 768px) {
       flex-direction: row;
       padding: var(--space-s) var(--space-s) var(--space-s);
@@ -131,6 +132,10 @@ header {
     @media (min-width: 992px) {
       padding: var(--space-s) var(--space-m) var(--space-s);
     }
+  }
+
+  a:hover {
+    color: var(--link-color);
   }
 
   a:before {

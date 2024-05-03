@@ -17,7 +17,7 @@
     --bs-gray-600: #6c757d;
     --bs-gray-700: #61686e;
     --bs-gray-800: #616161;
-    --bs-gray-900: #212529;
+    --bs-gray-900: #313a3a;
 
     --clr-bg-green-solid: rgba(221,229,226,1);
     --clr-bg-green: rgba(232, 237, 232, 1);
@@ -41,6 +41,9 @@
 
     --header-color: var(--bs-gray-800);
     --txt-color: var(--bs-gray-700);
+    --link-color: var(--txt-color);
+    --link-hover-color: var(--bs-gray-900);
+
 
     --fs0: 1.125rem;
     --fs1: 1.563rem;
