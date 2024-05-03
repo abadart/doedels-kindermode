@@ -80,6 +80,27 @@ a.phone {
   }
 }
 
+a.app {
+  display: block;
+
+  &:hover {
+    &:before {
+      background-color: var(--link-hover-color);
+    }
+  }
+
+  &:before {
+    display: inline-block;
+    background-color: var(--bs-gray-600);
+    content: '';
+    width: 18px;
+    height: 18px;
+    mask: url(../../icons/whatsapp.svg) 0% 100% no-repeat;
+    mask-size: 75%;
+    transform: translateY(1px);
+  }
+}
+
 a.mail {
   display: block;
 
