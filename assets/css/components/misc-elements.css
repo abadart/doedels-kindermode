@@ -25,9 +25,11 @@
   bottom: 45%;
   transform: rotate(-30deg) translateX(50%);
   z-index: 0;
+  max-width: 90px;
 
   @media (min-width: 768px) {
     bottom: 0%;
+    max-width: 220px;
   }
 }
 
