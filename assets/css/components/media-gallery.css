@@ -106,6 +106,13 @@
 
   @media (min-width: 768px) {
     max-height: 400px;
+    margin-top: var(--space-l);
+    margin-bottom: var(--space-l);
+  }
+
+  @media (min-width: 992px) {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
   }
 
   img,
