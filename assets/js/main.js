@@ -65,7 +65,7 @@ const loadGA4 = async () => {
 if (document.cookie.indexOf("cookieconsent=") < 0) {
     fetchCookieModal();
 } else if (document.cookie.indexOf("cookieconsent=1") >= 0) {
-    loadGA4();
+    // loadGA4();
 }
 
 // Mailchimp post and validation
