@@ -1,0 +1,27 @@
+.cookies {
+  --fs0: 1rem;
+  --txt-color: var(--bs-gray-700);
+
+  border: 1px solid var(--bs-gray-700);
+  background-color: var(--clr-bg-green);
+  border-radius: 5px 0 0 0;
+  bottom: 0;
+  left: auto;
+  max-width: 90ch;
+  padding: var(--space-l) var(--space-l) var(--space-l) var(--space-l);
+  position: fixed;
+  right: 0px;
+  z-index: 999;
+
+  h2 {
+    font-size: var(--fs2);
+  }
+
+  .btn {
+    margin-right: var(--space-s);
+  }
+
+  &:before {
+
+  }
+}

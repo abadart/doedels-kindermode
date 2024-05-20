@@ -123,3 +123,32 @@ a.mail {
     transform: translateY(1px);
   }
 }
+
+.btn {
+  --btn-border-color: var(--bs-gray-600);
+  --btn-background-color: var(--bs-gray-600);
+  --btn-txt-color: var(--clr-bg-green);
+  --btn-hover-background-color: var(--clr-bg-medium-green);
+  --btn-hover-txt-color: var(--bs-gray-600);
+
+  background: var(--btn-background-color);
+  border: 1px solid var(--btn-border-color);
+  border-radius: 3px;
+  color: var(--btn-txt-color);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  padding: var(--space-s) var(--space-l);
+
+  &:hover {
+    color: var(--btn-hover-txt-color);
+    background-color: var(--btn-hover-background-color);
+  }
+}
+
+.btn-secondary {
+  --btn-background-color: var(--clr-bg-green);
+  --btn-txt-color: var(--bs-gray-600);
+  --btn-hover-background-color: var(--clr-bg-medium-green);
+  --btn-hover-txt-color: var(--bs-gray-600);
+}

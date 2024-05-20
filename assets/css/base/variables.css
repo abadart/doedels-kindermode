@@ -44,7 +44,7 @@
     --link-color: var(--txt-color);
     --link-hover-color: var(--bs-gray-900);
 
-
+    --fs-1: 1rem;
     --fs0: 1.125rem;
     --fs1: 1.563rem;
     --fs2: 2.441rem;
