@@ -1,5 +1,4 @@
 // Mobile nav
-
 const mobileNavToggle = document.getElementById('toggleMainNav');
 
 const openNavigation = () => {
@@ -27,13 +26,16 @@ window.addEventListener('keyup', (e) => {
 });
 
 
+// Consent and analitics
+const tagID = 'G-QMEFM8H3FJ';
+
 const setConstentCookie = (cookiepref) => {
     const d = new Date();
     d.setTime(d.getTime() + (365*24*60*60*1000));
     document.cookie = `cookieconsent=${cookiepref}; expires=${d.toUTCString()}; Secure;`;
 }
 
-const fetchCookieModal = async () => {
+const showCookieModal = async () => {
     const response = await fetch("cookiemodal.html");
     const modalHtml = await response.text();
     const body = document.querySelector("body");
@@ -46,7 +48,7 @@ const fetchCookieModal = async () => {
     acceptCookiesBtn.addEventListener('click', (e) => {
         e.preventDefault();
         setConstentCookie("1");
-        loadGA4();
+        updateGtagWithConsent();
         cookieModal.close();
     });
 
@@ -57,16 +59,69 @@ const fetchCookieModal = async () => {
     });
 }
 
-const loadGA4 = async () => {
-
+const setGtagWithoutConcent = () => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', tagID);
 }
 
-// Check consent
-if (document.cookie.indexOf("cookieconsent=") < 0) {
-    fetchCookieModal();
-} else if (document.cookie.indexOf("cookieconsent=1") >= 0) {
-    // loadGA4();
+const setGtagWithConcent = () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', tagID);
 }
+
+const updateGtagWithConsent = () => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+      
+    gtag('consent', 'update', {
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'ad_storage': 'denied',
+        'analytics_storage': 'granted'
+    });
+
+    gtag('js', new Date());
+    gtag('config', tagID);
+}
+
+const loadGoogleTag = async () => {
+    const gtmScript = document.createElement('script');
+    gtmScript.src = `https://www.googletagmanager.com/gtag/js?id=${tagID}`;
+    gtmScript.async = true;
+  
+    // Append the scripts to the head of the document
+    document.head.appendChild(gtmScript);
+}
+
+const cookieConsentSet = () => {
+    return !(document.cookie.indexOf("cookieconsent=") < 0);
+}
+
+const haveConsentForCookies = () => {
+    return (document.cookie.indexOf("cookieconsent=1") >= 0);
+}
+
+
+loadGoogleTag();
+
+// check cookieconsent and handle following actions
+if (!cookieConsentSet()) {
+    showCookieModal();
+    setGtagWithoutConcent();
+} else if (haveConsentForCookies()) {
+    setGtagWithConcent();
+}
+
 
 // Mailchimp post and validation
 const newsLetterForm = document.forms.nlForm;

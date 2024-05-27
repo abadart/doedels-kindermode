@@ -19,6 +19,7 @@
 
   .btn {
     margin-right: var(--space-s);
+    margin-bottom: var(--space-s);
   }
 
   &:before {
