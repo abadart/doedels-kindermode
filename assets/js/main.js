@@ -112,14 +112,14 @@ const haveConsentForCookies = () => {
 }
 
 
-loadGoogleTag();
+// loadGoogleTag();
 
 // check cookieconsent and handle following actions
 if (!cookieConsentSet()) {
-    showCookieModal();
-    setGtagWithoutConcent();
+    // showCookieModal();
+    // setGtagWithoutConcent();
 } else if (haveConsentForCookies()) {
-    setGtagWithConcent();
+    // setGtagWithConcent();
 }
 
 
