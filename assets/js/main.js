@@ -140,6 +140,10 @@ const sendFormData = async (form) => {
     params.append('_', Date.now());
 
     const requestUrl = form.action + '&' + params.toString();
+    const botCheck = params.get("b_d9195e5285b008d78540931c4_13304b5a94");
+    if (botCheck) {
+        return;
+    }
 
     try {
         const response = await fetch(requestUrl, {
