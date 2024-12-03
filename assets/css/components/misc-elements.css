@@ -76,7 +76,7 @@ a.phone {
     content: '';
     width: 16px;
     height: 16px;
-    mask: url(../../icons/phone.svg) 0% 100% no-repeat;
+    mask: url(/assets/icons/phone.svg) 0% 100% no-repeat;
     mask-size: 75%;
     transform: translateY(1px);
   }
@@ -97,7 +97,7 @@ a.app {
     content: '';
     width: 18px;
     height: 18px;
-    mask: url(../../icons/whatsapp.svg) 0% 100% no-repeat;
+    mask: url(/assets/icons/whatsapp.svg) 0% 100% no-repeat;
     mask-size: 75%;
     transform: translateY(1px);
   }
@@ -118,7 +118,7 @@ a.mail {
     content: '';
     width: 16px;
     height: 16px;
-    mask: url(../../icons/mail.svg) 0% 100% no-repeat;
+    mask: url(/assets/icons/mail.svg) 0% 100% no-repeat;
     mask-size: 75%;
     transform: translateY(1px);
   }

@@ -98,6 +98,7 @@ const loadGoogleTag = async () => {
     const gtmScript = document.createElement('script');
     gtmScript.src = `https://www.googletagmanager.com/gtag/js?id=${tagID}`;
     gtmScript.async = true;
+    gtmScript.defer = true;
   
     // Append the scripts to the head of the document
     document.head.appendChild(gtmScript);
@@ -111,15 +112,14 @@ const haveConsentForCookies = () => {
     return (document.cookie.indexOf("cookieconsent=1") >= 0);
 }
 
-
-// loadGoogleTag();
+loadGoogleTag();
 
 // check cookieconsent and handle following actions
 if (!cookieConsentSet()) {
-    // showCookieModal();
-    // setGtagWithoutConcent();
+    showCookieModal();
+    setGtagWithoutConcent();
 } else if (haveConsentForCookies()) {
-    // setGtagWithConcent();
+    setGtagWithConcent();
 }
 
 

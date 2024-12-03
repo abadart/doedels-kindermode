@@ -29,12 +29,12 @@ ul.socials {
   }
 
   .facebook {
-    mask: url(../../icons/facebook.svg) 0% 50% no-repeat;
+    mask: url(/assets/icons/facebook.svg) 0% 50% no-repeat;
     mask-size: 75%;
   }
 
   .instagram {
-    mask: url(../../icons/instagram.svg) 0% 50% no-repeat;
+    mask: url(/assets/icons/instagram.svg) 0% 50% no-repeat;
     mask-size: 75%;
   }
 }

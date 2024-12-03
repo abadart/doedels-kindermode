@@ -1,9 +1,46 @@
-ErrorDocument 404 404.html 
-
+ErrorDocument 404 /404.html 
 <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteCond %{REQUEST_URI} !/$
-RewriteRule (.*) $1\.html [L]
+    RewriteEngine On
+    RewriteBase /
+
+# Remove the .html extension
+    RewriteCond %{THE_REQUEST} ^GET\ (.*)\.html\ HTTP
+    RewriteRule (.*)\.html$ $1 [R=301]
+
+# Remove index and reference the directory
+    RewriteRule (.*)/index$ $1/ [R=301]
+
+# Remove trailing slash if not a directory
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} /$
+    RewriteRule (.*)/ $1 [R=301]
+
+# Forward request to html file, **but don't redirect (bot friendly)**
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteCond %{REQUEST_URI} !/$
+    RewriteRule (.*) $1\.html [L]
+
+# Rewrite non min to min css file
+# RewriteRule /main.css$ /main.min.css [NC]
+
+
+#OLD URLS
+RedirectMatch 301 ^/collectie/jongenskleding /collectie
+RedirectMatch 301 ^/collectie/levv /collectie
+RedirectMatch 301 ^/collectie/meisjeskleding /collectie
+RedirectMatch 301 ^/collectie/babykleding /collectie
+RedirectMatch 301 ^/collectie/accessoires /collectie
+RedirectMatch 301 ^/collectie/kraamcadeaus /collectie
+RedirectMatch 301 ^/collectie/looxs /collectie
+RedirectMatch 301 ^/collectie/indian-blue-jeans /collectie
+RedirectMatch 301 ^/collectie/noppies /collectie
+RedirectMatch 301 ^/collectie/feetje /collectie
+RedirectMatch 301 ^/collectie/cars-jeans /collectie
+RedirectMatch 301 ^/collectie/klick-it /collectie
+RedirectMatch 301 ^/collectie/dutch-dream-denim /collectie
+
 </IfModule>
+
+<ifmodule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+</ifmodule>
