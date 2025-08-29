@@ -4,17 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "browser-sync start --server '' --files ''",
-    "build": "postcss assets/css/main.css > assets/css/main.min.css"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "browser-sync start --server '' --files --cors''"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abadart/doedels-kindermode.git"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^3.0.3",
-    "cssnano": "^7.0.6",
-    "postcss": "^8.4.49",
-    "postcss-cli": "^11.0.0",
-    "postcss-import": "^16.1.0",
-    "postcss-nesting": "^13.0.1"
+  "bugs": {
+    "url": "https://github.com/abadart/doedels-kindermode/issues"
+  },
+  "homepage": "https://github.com/abadart/doedels-kindermode#readme",
+  "dependencies": {
+    "browser-sync": "^3.0.4"
   }
 }
