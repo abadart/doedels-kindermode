@@ -127,11 +127,18 @@ if (!cookieConsentSet()) {
 const newsLetterForm = document.forms.nlForm;
 const formResponseElm = document.querySelector('.newsletter-form-cta');
 const mc_c = 'jQuery190045426647972713097_';
+const loadedAt = Date.now();
 
-newsLetterForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    sendFormData(event.target);
-});
+if (newsLetterForm){
+    newsLetterForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6LcFoqMrAAAAAEy44vCmWph3MVaAgYV90t_UbCtW', {action: 'submit'}).then(function(token) {
+              sendFormData(event.target);
+          });
+        });
+    });
+}
 
 const sendFormData = async (form) => {
     const formData = new FormData(form);
@@ -140,10 +147,20 @@ const sendFormData = async (form) => {
     params.append('_', Date.now());
 
     const requestUrl = form.action + '&' + params.toString();
-    const botCheck = params.get("b_d9195e5285b008d78540931c4_13304b5a94");
-    if (botCheck) {
-        return;
-    }
+    // const botCheck = params.get("b_d9195e5285b008d78540931c4_13304b5a94");
+    // const fakeFirst =Number(params.get("firstname"));
+    // const fakseSecond = Number(params.get("lastname"));
+    // if (botCheck) {
+    //     return;
+    // }
+
+    // if (fakeFirst + fakseSecond != 3){
+    //     return;
+    // }
+    
+    // if ((Date.now() - loadedAt) < 9000) {
+    //     return;
+    // }
 
     try {
         const response = await fetch(requestUrl, {
