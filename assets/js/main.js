@@ -122,6 +122,15 @@ if (!cookieConsentSet()) {
     setGtagWithConcent();
 }
 
+// Promotion dialog
+const showPromotionDialog = async () => {
+    const response = await fetch("promotion.html");
+    const modalHtml = await response.text();
+    const body = document.querySelector("body");
+    body.insertAdjacentHTML("afterbegin",modalHtml);
+}
+
+// showPromotionDialog();
 
 // Mailchimp post and validation
 const newsLetterForm = document.forms.nlForm;
@@ -145,22 +154,7 @@ const sendFormData = async (form) => {
     const params = new URLSearchParams(formData);
     params.append('c', mc_c + Date.now());
     params.append('_', Date.now());
-
     const requestUrl = form.action + '&' + params.toString();
-    // const botCheck = params.get("b_d9195e5285b008d78540931c4_13304b5a94");
-    // const fakeFirst =Number(params.get("firstname"));
-    // const fakseSecond = Number(params.get("lastname"));
-    // if (botCheck) {
-    //     return;
-    // }
-
-    // if (fakeFirst + fakseSecond != 3){
-    //     return;
-    // }
-    
-    // if ((Date.now() - loadedAt) < 9000) {
-    //     return;
-    // }
 
     try {
         const response = await fetch(requestUrl, {
