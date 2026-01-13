@@ -141,11 +141,11 @@ const loadedAt = Date.now();
 if (newsLetterForm){
     newsLetterForm.addEventListener('submit', (event) => {
         event.preventDefault();
-        grecaptcha.ready(function() {
-          grecaptcha.execute('6LcFoqMrAAAAAEy44vCmWph3MVaAgYV90t_UbCtW', {action: 'submit'}).then(function(token) {
+        // grecaptcha.ready(function() {
+        //   grecaptcha.execute('6LcFoqMrAAAAAEy44vCmWph3MVaAgYV90t_UbCtW', {action: 'submit'}).then(function(token) {
               sendFormData(event.target);
-          });
-        });
+        //   });
+        // });
     });
 }
 
